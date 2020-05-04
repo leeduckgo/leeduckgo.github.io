@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks!
+      -->
+
+    <!-- SEO -->
+    <title>一门轻量级的 Python 小课</title>
+    <meta name="description" content="一门轻量级的 Python 小课">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/permalink"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css" >
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type="text/css" media="all" href="static/css/svg-icons.css" >
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+
+    <!-- SVGS-->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      
+      <symbol id="icon-github" viewBox="0 0 512 512">
+        <path d="m475 256c0 48-14 91-41 129-28 38-64 65-109 79-5 1-8 1-11-2-2-2-3-5-3-8l0-61c0-18-5-32-15-40 11-1 20-3 29-5 9-3 18-6 27-11 9-6 17-12 23-19 6-8 11-18 15-30 4-13 6-27 6-43 0-23-8-43-23-59 7-18 7-37-2-59-5-1-13 0-23 4-10 3-19 8-26 12l-11 7c-18-5-36-7-55-7-19 0-37 2-55 7-3-2-7-5-12-8-5-3-13-6-24-11-11-4-19-5-24-4-9 22-9 41-2 59-15 16-23 36-23 59 0 16 2 30 6 42 4 13 9 23 15 30 6 8 14 14 23 20 9 5 18 8 27 11 8 2 18 4 29 5-8 7-12 17-14 29-4 2-8 4-13 5-4 1-10 1-16 1-6 0-13-2-19-6-6-4-11-10-16-18-3-6-8-11-14-15-5-4-10-6-14-7l-5-1c-4 0-7 1-9 2-1 1-2 2-1 3 0 1 1 3 2 4 2 1 3 2 4 3l2 2c4 2 8 5 13 11 4 5 7 10 9 14l2 7c3 7 7 13 13 17 6 5 12 8 19 9 7 1 14 2 20 2 6 0 12 0 16-1l6-1c0 7 0 16 1 25 0 10 0 15 0 16 0 3-2 6-4 8-2 3-6 3-11 2-45-14-81-41-109-79-27-38-41-81-41-129 0-40 9-77 29-110 20-34 46-60 80-80 33-20 70-29 110-29 40 0 77 9 110 29 34 20 60 46 80 80 20 33 29 70 29 110z"/>
+      </symbol>
+
+      <symbol id="icon-book" viewBox="0 0 512 512">
+        <path d="m487 137c7 10 9 23 5 36l-79 259c-3 12-11 23-22 31-11 8-22 12-35 12l-263 0c-15 0-29-5-43-15-13-10-23-23-28-37-5-13-5-25-1-37 0 0 0-3 1-7 1-5 1-8 1-11 0-2 0-4-1-6 0-3-1-5-1-6 1-2 2-4 3-6 1-2 2-4 4-6 2-3 4-5 5-7 5-7 9-16 13-26 4-10 7-19 9-26 0-2 0-5-1-9 0-4 0-6 0-8 1-2 2-5 5-8 3-3 4-5 5-7 4-6 8-15 12-26 4-11 6-19 7-26 0-1 0-4-1-9 0-4 0-7 0-8 1-2 3-5 7-8 3-4 5-6 6-7 3-5 8-13 12-24 4-11 7-20 8-28 0-1 0-4-1-7-1-3-1-6-1-7 1-2 2-4 3-6 1-1 3-4 5-6 2-3 4-5 5-6 2-2 3-5 5-9 1-3 3-7 4-10 1-3 3-6 5-10 1-4 3-7 5-9 2-3 5-5 8-7 3-2 6-3 10-3 4 0 8 0 14 1l-1 1c8-2 12-2 15-2l217 0c14 0 25 5 33 16 7 10 9 23 5 37l-78 259c-7 22-14 37-21 43-6 7-19 10-36 10l-249 0c-5 0-8 2-11 5-2 3-2 7 0 12 5 13 18 20 41 20l264 0c6 0 11-2 16-5 5-3 8-6 10-11l86-282c1-5 2-10 1-17 7 3 13 7 17 13z m-304 0c-1 3-1 5 0 7 1 1 3 2 6 2l174 0c2 0 4-1 7-2 2-2 4-4 5-7l6-18c0-3 0-5-1-7-1-1-3-2-6-2l-173 0c-3 0-5 1-8 2-2 2-4 4-4 7z m-24 73c-1 3-1 5 0 7 2 2 3 2 6 2l174 0c2 0 5 0 7-2 3-2 4-4 5-7l6-18c1-2 0-5-1-6-1-2-3-3-5-3l-174 0c-3 0-5 1-7 3-3 1-4 4-5 6z"/>
+      </symbol>
+
+      <symbol id="icon-weixin" viewBox="0 0 512 512">
+        <path d="m129 132c0-8-2-14-7-19-5-5-11-7-19-7-8 0-15 2-22 7-6 5-9 11-9 19 0 7 3 13 9 18 7 5 14 7 22 7 8 0 14-2 19-7 5-4 7-10 7-18z m212 145c0-6-2-11-7-15-5-4-11-6-19-6-5 0-9 2-14 6-4 5-6 9-6 15 0 5 2 10 6 14 5 4 9 6 14 6 8 0 14-2 19-6 5-4 7-9 7-14z m-67-145c0-8-2-14-7-19-5-5-11-7-19-7-8 0-15 2-21 7-7 5-10 11-10 19 0 7 3 13 10 18 6 5 13 7 21 7 8 0 14-2 19-7 5-4 7-10 7-18z m181 145c0-6-2-11-7-15-5-4-11-6-19-6-5 0-9 2-14 6-4 5-6 9-6 15 0 5 2 10 6 14 5 4 9 6 14 6 8 0 14-2 19-6 5-4 7-9 7-14z m-76-114c-5-1-12-1-20-1-32 0-61 7-88 22-27 15-49 35-64 60-16 25-24 52-24 82 0 15 3 29 7 43-7 1-13 1-19 1-5 0-10 0-15 0-4-1-10-1-15-2-6-1-11-2-13-2-3-1-8-2-16-3-8-2-12-3-14-3l-72 36 20-62c-55-39-83-86-83-140 0-32 10-62 28-89 19-27 44-48 76-64 31-16 66-23 104-23 33 0 65 6 95 19 29 12 54 30 74 52 21 22 34 47 39 74z m170 160c0 23-7 44-20 64-13 21-31 39-53 56l16 51-57-31c-29 7-49 11-62 11-33 0-62-7-89-20-27-14-49-32-64-55-16-23-23-48-23-76 0-27 7-52 23-75 15-23 37-41 64-55 27-13 56-20 89-20 30 0 59 7 86 20 27 14 49 32 65 55 16 23 25 48 25 75z"/>
+      </symbol>
+
+      <symbol id="icon-id-card" viewBox="0 0 512 512">
+        <path d="m235 171l-150 0l0 170l150 0z m-22 138c0-17-24-32-53-32c-29 0-53 15-53 32l0-117l106 0z m-85-64c0 18 14 32 32 32c18 0 32-14 32-32c0-17-14-32-32-32c-18 0-32 15-32 32z m340-160l-427 0c-23 0-41 18-41 41l0 256c0 24 18 45 41 45l427 0c23 0 44-21 44-45l0-256c0-23-21-41-44-41z m1 299l-426 0l0-256l426 0z m-192-213l150 0l0 42l-150 0z m0 64l150 0l0 21l-150 0z m0 42l150 0l0 22l-150 0z m0 43l64 0l0 21l-64 0z m86 0l21 0l0 21l-21 0z"/>
+      </symbol>
+
+      <symbol id="icon-commenting-o" viewBox="0 0 512 512">
+        <path d="m183 256c0 10-4 19-11 26-7 7-16 11-26 11-10 0-18-4-26-11-7-7-10-16-10-26 0-10 3-19 10-26 8-7 16-11 26-11 10 0 19 4 26 11 7 7 11 16 11 26z m110 0c0 10-4 19-11 26-7 7-16 11-26 11-10 0-19-4-26-11-7-7-11-16-11-26 0-10 4-19 11-26 7-7 16-11 26-11 10 0 19 4 26 11 7 7 11 16 11 26z m109 0c0 10-3 19-10 26-8 7-16 11-26 11-10 0-19-4-26-11-7-7-11-16-11-26 0-10 4-19 11-26 7-7 16-11 26-11 10 0 18 4 26 11 7 7 10 16 10 26z m-146-146c-39 0-75 6-109 20-34 13-61 31-81 53-19 23-29 47-29 73 0 21 6 42 20 61 14 19 33 36 58 50l24 14-7 28c-5 17-12 34-20 49 29-12 55-28 78-49l13-11 16 2c13 2 25 2 37 2 39 0 75-6 109-20 34-13 61-31 81-53 19-23 29-47 29-73 0-26-10-50-29-73-20-22-47-40-81-53-34-14-70-20-109-20z m256 146c0 33-11 64-34 92-23 28-54 50-93 66-40 17-83 25-129 25-13 0-27-1-41-2-38 33-82 56-132 69-9 2-20 4-32 6l-2 0c-3 0-5-1-8-3-2-2-3-5-4-8l0 0c-1-1-1-2 0-4 0-1 0-2 0-2 0-1 1-2 2-3l1-3 2-2 3-3c1-1 4-5 8-10 5-5 8-8 10-10 2-3 5-6 9-12 4-5 7-10 9-14 3-5 5-10 8-17 3-7 5-14 8-22-30-17-54-38-71-63-17-25-26-51-26-80 0-25 7-48 20-71 14-23 32-42 55-58 23-17 50-30 82-39 31-10 64-15 99-15 35 0 68 5 99 15 32 9 59 22 82 39 23 16 41 35 55 58 13 23 20 46 20 71z"/>
+      </symbol>
+
+    </svg>
+
+    <!-- SVG-STYLE-->
+    <style>
+      [class^="icon-"], [class*=" icon-"] {
+        height: 32px;
+        width: 32px;
+        display: inline-block; 
+        fill: currentColor; 
+    }
+    </style>
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p class="logo"><a href="../index.html" title="Python-Light-Class">Python-Light-Class</a></p>
+        <!-- <p class="logo">
+          <svg class="icon-github">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </p> -->
+        <ul>
+          <li class="github">
+            <a rel="external" href="https://github.com/webslides/webslides" title="Github">
+              <svg class="fa-github">
+                <use xlink:href="#fa-github"></use>
+              </svg>
+              <em>WebSlides</em>
+            </a>
+          </li>
+          <li class="twitter">
+            <a rel="external" href="https://twitter.com/webslides" title="Twitter">
+              <svg class="fa-twitter">
+                <use xlink:href="#fa-twitter"></use>
+              </svg>
+              <em>@WebSlides</em>
+            </a>
+          </li>
+          <!--  <li class="dribbble"><a rel="external" href="http://dribbble.com/webslides" title="Dribbble"><svg class="fa-dribbble"><use xlink:href="#fa-dribbble"></use></svg> <em>webslides</em></a></li> -->
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <article id="webslides">
+
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+        <section id="slide1">
+          
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter">
+            <img src="static/images/ava.jpeg" style="zoom:20%;">
+            <br><br>
+            <h3>你好，我是 <strong>李大狗Leeduckgo</strong></h3>
+            <h4>这是由我研发的一门轻量级的免费的 Python 小课</h4>
+            <h4>供没有基础的同学<strong> 10 分钟入门 Python</strong><h4>
+            <br>
+            <a href="#slide=2" class="button" title="Button">
+              我要学！
+            </a>
+            
+
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section id="slide2">
+          <div class="wrap aligncenter">
+              <h2>实践</h2>
+              <br>
+              <p>我们先来学习 <strong>print()</strong>—— </p>
+              <p><strong>打开这个网站：</strong> <a href="https://repl.it/languages/python3">python3 在线 ide</a></p>
+              <p><strong>如果打不开……原因你懂的，那么打开这个：</strong> <a href="https://www.w3cschool.cn/tryrun/runcode?lang=python">python3 在线ide 2</a></p>
+              <p>
+                输入 <strong>print("hello,duckgo")</strong>
+              </p>
+              <p>
+                随即黑色窗口会输出 "hello,duckgo"
+              </p>
+              <p><img src="static/images/hello_duckgo.png" style="zoom:50%;"></p>
+              <p>
+                Okay……你已经迈出了重要的一步了……
+              </p>
+              <a href="#slide=3" class="button" title="Button">
+                我做了什么？
+              </a>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section id="slide3">
+          <div class="wrap aligncenter">
+              <h2>解析</h2>
+              <br>
+              <p>本质上，你是做了一道<strong>「填空题」</strong></p>
+              <p>你把一个「东东」填到了 <strong>print( ??? )</strong> 的 ??? 处。</p>
+              <p>
+                现在……你可以尝试一下替换它
+              </p>
+              <p><img src="static/images/print_others.png" style="zoom:50%;"></p>
+              <p>
+              <a href="#slide=3" class="button" title="Button">
+                我懂了，So Easy！下一步~
+              </a>
+              </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section id="slide4">
+            <style>
+              .inner_card, .inner_card:focus {
+                outline-width: 0px !important;
+                box-shadow: none !important;
+              }
+            </style>
+            <div class="wrap">
+              <h2>所在之处</h2>
+              <ul class="flexblock features">
+                
+                <li>
+                  <a class="inner_card" href="https://github.com/leeduckgo" target="_blank">
+                  <div>
+                    
+                    <h2>
+                      <svg class="icon-github">
+                        <use xlink:href="#icon-github"></use>
+                      </svg>
+                      Github
+                    </h2>
+                    我的 Github 主页
+                  </div>
+                  </a>
+                </li>
+                
+                <li>
+                  <a class="inner_card" href="#slide=5">
+                  <div>
+                    <h2>
+                      <svg class="icon-book">
+                        <use xlink:href="#icon-book"></use>
+                      </svg>
+                      公众号「李大狗Leeduckgo」
+                    </h2>
+                      区块链与面向炫酷编程
+                  </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="inner_card" href="#slide=6">
+                  <div>
+                    <h2>
+                      <svg class="icon-weixin">
+                        <use xlink:href="#icon-weixin"></use>
+                      </svg>
+                      个人微信号
+                    </h2>
+                      直接联系我，谢绝白痴问题
+                  </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="inner_card" href="https://github.com/SUIBE-Blockchain/" target="_blank">
+                  <div>
+                    <h2>
+                      <svg class="icon-github">
+                        <use xlink:href="#icon-github"></use>
+                      </svg>
+                      OPEN-SOURCE ORG
+                    </h2>
+                    上外贸区块链中心de开源组织
+                  </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="inner_card" href="#slide=7">
+                  <div>
+                    <h2>
+                      <svg class="icon-id-card">
+                        <use xlink:href="#icon-id-card"></use>
+                      </svg>
+                      我的名片
+                    </h2>
+                    上外贸区块链研究中心副主任
+                  </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="inner_card" href="https://www.zhihu.com/people/Leeduckgo" target="_blank">
+                  <div>
+                    <h2>
+                      <svg class="icon-commenting-o">
+                        <use xlink:href="#icon-commenting-o"></use>
+                      </svg>
+                      我的知乎
+                    </h2>
+                    即有干货，也有灌水
+                  </div>
+                  </a>
+                </li>
+              </ul>
+            </div>        
+          
+          <!-- .end .wrap -->
+        </section>
+        <section id="slide5">
+          <div class="wrap aligncenter">
+            <img src="static/images/slogan.jpeg">
+          </div>
+        </section>
+        <section id="slide6">
+          <div class="wrap aligncenter">
+            <img src="static/images/qr_code.png">
+          </div>
+        </section>
+        <section id="slide7">
+          <div class="wrap aligncenter">
+            <img src="static/images/name_card.jpeg" style="zoom:50%;">
+          </div>
+        </section>
+      </body>
+        
+      </article>
+    </main>
+    <!--main-->
+
+    <!-- Required -->
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <!-- <script defer src="static/js/svg-icons.js"></script> -->
+
+  </body>
+</html>
